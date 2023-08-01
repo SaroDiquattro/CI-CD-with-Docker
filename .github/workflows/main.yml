@@ -1,4 +1,4 @@
-name: Test
+name: Build and deploy container app to Azure Web App - sarodiquattrodockercicd
 
 on:
   push:
