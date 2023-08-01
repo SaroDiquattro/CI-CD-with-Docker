@@ -26,7 +26,7 @@ jobs:
           context: src/docker-ci-cd/DockerTutorialCICD/
           push: true
           tags: index.docker.io/${{ secrets.ContainerUsername }}/dockercicid:${{ github.sha }}
-          file: src/docker-ci-cd/DockerTutorialCICD/Dockerfile
+          file: repository/dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'micheleferracindockercicd'
+          app-name: 'sarodiquattrodockercicd'
           slot-name: 'production'
           publish-profile: ${{ secrets.PublishProfile }}
           images: 'index.docker.io/${{ secrets.ContainerUsername }}/dockercicid:${{ github.sha }}'
