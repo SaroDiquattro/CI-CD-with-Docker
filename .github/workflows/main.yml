@@ -43,4 +43,4 @@ jobs:
           app-name: 'sarodiquattrodockerci-cd'
           slot-name: 'production'
           publish-profile: ${{ secrets.PublishProfile }}
-          images: 'index.docker.io/${{ secrets.ContainerUsername }}/dockercicid:${{ github.sha }}'
+          images: 'index.docker.io/${{ secrets.ContainerUsername }}/dockercicd:${{ github.sha }}'
