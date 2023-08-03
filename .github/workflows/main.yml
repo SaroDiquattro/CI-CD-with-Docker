@@ -25,7 +25,7 @@ jobs:
         with:
           context: repository
           push: true
-          tags: index.docker.io/${{ secrets.ContainerUsername }}/dockercicid:${{ github.sha }}
+          tags: index.docker.io/${{ secrets.ContainerUsername }}/dockercicd:${{ github.sha }}
           file: repository/dockerfile
 
   deploy:
