@@ -26,7 +26,7 @@ jobs:
           context: repository
           push: true
           tags: index.docker.io/${{ secrets.ContainerUsername }}/dockercicd:${{ github.sha }}
-          file: repository/dockerfile
+          file: repository/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
